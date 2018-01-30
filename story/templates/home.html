@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title%}
+
+    <title>game screen</title>
+
+{% endblock %}
+
+ {% block content %}
+ 		<h1>What is this game about ?</h1>
+ 		<p>This is an interactive story telling game in which your choices will determine how the game will proceed</p>
+<a href = "{% url 'story:about_game' %}"> <button>how to play</button> </a>    
+<a href = "{% url 'story:start' %}"> <button>start game</button> </a>
+
+
+{% endblock content %}

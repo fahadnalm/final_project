@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+	
+{% endblock title %}
+
+{% block content %}
+
+{% for option in options %}
+<a href="/story/next/{{option.choice}}/{{option.nextpage}}/"><input type="button" value="{{option.choice}}" ></a>
+{% endfor %}
+	
+{% endblock content %}
