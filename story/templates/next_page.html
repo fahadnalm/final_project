@@ -1,3 +1,9 @@
-{%block content %}
-{{option.choice}}
-{%endblock content%}
+{% extends "base.html" %}
+
+
+{% block content %}
+	{{next_page.text}}
+	{% for option in next_page.current_page.all  %}
+		{{option}}
+	{% endfor %}
+{% endblock content %}

@@ -1,14 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}
-
-	
-{% endblock title %}
 
 {% block content %}
-
-{% for option in options %}
-<a href="/story/next/{{option.choice}}/{{option.nextpage}}/"><input type="button" value="{{option.choice}}" ></a>
-{% endfor %}
-	
+	{{page.text}}
+	{% for option in page.current_page.all %}
+		<a href="/story/next/{{option.id}}/"><input type="button" value="{{option}}" ></a>
+	{% endfor %}
 {% endblock content %}

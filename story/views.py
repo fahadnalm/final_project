@@ -11,13 +11,19 @@ def about_game(request):
 	return render(request, 'about_game.html', context)
 
 def start(request):
-	options = Option.objects.all()
-	context = {'options':options}
+	page = Page.objects.get(id=1) #starting page
+	context = {
+		'page': page,
+	}
+
 	return render(request, 'start.html', context)
 
-def next_page(request, user_choice, next_page):
-	option = Option.objects.get(choice=user_choice) #Is this A or B or C?  Retrieve the user option 
+def next_page(request, option_id):
+	option = Option.objects.get(id=option_id)
+	 #Page.objects.get(option_id=) #Is this A or B or C?  Retrieve the user option 
 
 	next_page = option.nextpage #Extract the next page of that choice
-	context = {'option':option}
-	return render(request, 'next_page.html', context)
+	context = {
+		'page': next_page
+	}
+	return render(request, 'start.html', context)

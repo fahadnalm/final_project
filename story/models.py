@@ -10,11 +10,12 @@ class Story(models.Model):
 
 class Page(models.Model):
     story = models.ForeignKey(Story, on_delete=models.CASCADE)
-    Text = models.TextField()
+    text = models.TextField()
+    title = models.CharField(max_length=150)
 
 
     def __str__(self):
-        return str(self.id)
+        return self.title
 
 class Option(models.Model):
     choice = models.CharField(max_length=150)
