@@ -1,9 +1,30 @@
 {% extends "base.html" %}
+{% load static %}
 
 
 {% block content %}
+<h1>
 	{{page.text}}
+	<h1>
+		<hr/>
+	<div class="container-fluid">
+		  <div class="row mx-auto text-center">
+
 	{% for option in page.current_page.all %}
+	    <div class="col-sm">
+	<div align="top">
 		<a href="/story/next/{{option.id}}/"><input type="button" value="{{option}}" ></a>
+	</div>
+</div>
 	{% endfor %}
+</div>
+</div>
+<hr/>
+	<div class=" mx-auto text-center ">
+		{% if page.image %}
+            <img class="img-fluid img-thumbnail rounded" src="{{page.image.url}}"  width=750px alt="Card image cap">
+        {% endif %}
+</div>
+</div>
+</div>
 {% endblock content %}

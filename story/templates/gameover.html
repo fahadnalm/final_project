@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<h1 align="center" style="color:red">
+	{{gameover}}<br />
+	{{reason}}
+</h1>
+	<div class=" mx-auto text-center ">
+		
+            <img class="img-fluid img-thumbnail rounded" src="{{img.url}}"  width=750px alt="Card image cap">
+        
+</div>      
+{% endblock content %}

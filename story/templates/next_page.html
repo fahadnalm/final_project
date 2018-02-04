@@ -1,9 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
 
 
 {% block content %}
+	{% if next_page.current_page.all is not None %}
+	{% if page.image %}
+            <img class="card-img-top" src="{{page.image.url}}" alt="Card image cap">
+        {% endif %}
 	{{next_page.text}}
 	{% for option in next_page.current_page.all  %}
 		{{option}}
 	{% endfor %}
+	{% endif %}
+
 {% endblock content %}

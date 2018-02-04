@@ -12,6 +12,8 @@ class Page(models.Model):
     story = models.ForeignKey(Story, on_delete=models.CASCADE)
     text = models.TextField()
     title = models.CharField(max_length=150)
+    image = models.ImageField(null=True, blank=True)
+    reason = models.CharField(max_length=140, null=True,blank=True)
 
 
     def __str__(self):
