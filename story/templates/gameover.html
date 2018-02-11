@@ -11,5 +11,11 @@
 		
             <img class="img-fluid img-thumbnail rounded" src="{{img.url}}"  width=750px alt="Card image cap">
         
-</div>      
+</div> 
+<br> 
+<div align="center">
+		<a  href = "{% url 'story:start' %}" style="text-decoration:none"> <input type="button" value="Play Again" class="btn btn-light" > </a>
+		<br>
+		<a  href = "{% url 'story:home' %}" style="text-decoration:none"> <input type="button" value="Home" class="btn btn-dark"> </a>
+</div>  
 {% endblock content %}

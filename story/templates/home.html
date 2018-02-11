@@ -4,18 +4,33 @@
 
 {% block title%}
 
-    <title>game screen</title>
+    <title> game screen </title>
 
-{% endblock %}
+{% endblock title %}
 
  {% block content %}
  		
- 		<h1 align="center">What is this game about ?</h1>
- 		<p align="center">This is an interactive story telling game in which your choices will determine how the game will proceed</p>
+ 		<h1 align="center">WHAT IS THIS GAME ABOUT?</h1>
+ 		<h2 align="center">This is an interactive story telling game in which your choices will determine how the game will proceed</h2>
 <div align="center">
- 			<a href = "{% url 'story:about_game' %}" style="text-decoration:none"> <input type="button" value="How To Play" ></input> </a>    
+ 			<a href = "{% url 'story:about_game' %}" style="text-decoration:none"> <input type="button" value="About The Story"></input> </a>   
 			<a href = "{% url 'story:start' %}" style="text-decoration:none"> <input type="button" value="Start Game" > </a>
+
 </div>
 
+<h3 align="center">if you like this game please share it with others:</h3>
+<div align="center">
+		<a href="https://twitter.com/home?status=I'm%20going%20to%20learn%20to%20Code...%20Come%20build%20an%20web%20apsp%20with%20me!%20%23CFE%20and%20@justinmitchel%20http://codingforentrepreneurs.com/">
+		Share on Twitter
+		</a>
+		<br>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http://CodingForEntrepreneurs.com/">
+		Share on Facebook
+		</a>
+</div>
+<br>
+<div align="center">
+<img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjt8-XLW2-MLH5BIfUIlrpenYZG8sOdetF074_8bUzdvNh3JYA" height="450" width="450">
+</div>
 
 {% endblock content %}
